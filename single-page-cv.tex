@@ -1,0 +1,138 @@
+\documentclass[11pt,a4,oneside]{article}
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{ragged2e}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{nopageno}
+\usepackage{textcomp}
+
+\geometry{
+a4paper,
+total={170mm,257mm},
+left= .5cm,rmargin=1cm
+}
+
+%Left justified fixed width collumn
+\newcolumntype{L}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\hspace{0pt}}p{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\makeatletter
+%\renewcommand{\maketitle}{
+%	\begin{flushleft}
+%		\textbf{\@title}\\
+%		\@author
+%	\end{flushleft}
+%}
+%\title{Dominic Lindsay}
+%\author{Moorgate, Lancsater, United Kingdom}
+%\makeatother
+%
+%\makeatletter
+%\setlength{\@fptop}{0pt}
+%\makeatother
+
+\begin{document}
+%	\thispagestyle{empty}\texttt{}
+			\noindent 
+	\begin{minipage}[t][0pt]{\linewidth}
+
+		\begin{tabular}[t]{ L{2.5cm} |  L{12.5cm}  R{3.5cm}}
+		
+		%%%%%%
+		% Contact
+		%%%%%%	
+			
+		\multicolumn{3}{l}{\textbf{\LARGE{Dominic Lindsay}}}
+		\\ \Xhline{3pt} 
+		\textbf{Contact} & \textbf{Address:} \newline Moorgate, Lancaster \newline United Kingdom & dcrl94@gmail.com \newline d.lindsay4@lancs.ac.uk 
+		
+		%%%%%%
+		% Background
+		%%%%%%
+		
+		\\ \hline \textbf{Background} & Cloud Computing and Orchestration Specialization, Fog Computing, Internet of Things, Operating Systems and Networking.
+		
+		%%%%%%
+		% Experience
+		%%%%%%
+		
+			\\ \textbf{Experience} &
+		I am an experience Software and Performance/DevOp's  Engineer. I am currently studying towards a PhD of Computer Science from Lancaster University. Here I am researching adaptive orchestration platforms, including workload analyses and architecture benchmarking. \newline
+		I aim to develop a federated orchestration framework for adaptive scheduling across mobile clusters.	Understanding orchestration performance metrics involves empirical analyses of scheduler and resource management policies/behaviours in real world cluster. Experimental analyses is conducted on a 100 node Kubernetes cluster I use to `spin up' test-beds on demand. 
+		
+		%%%%%%
+		% Education
+		%%%%%%
+		
+		\\ \hline \textbf{Education} & \textbf{Lancaster University}, PhD Computer Science  
+		\newline \textit{Specialisation}: Scheduling and Orchestration, Fog Computing and the Internet of Things
+		& \textit{September 2017 \newline - Present}
+		\\ & \textbf{Lancaster University}, MSci Software Engineering (\textit{1\textsuperscript{st} Class}) \newline \textit{Specialisation:} Service Orientated Architecture and Internet of Things 
+		\newline  \textit{Dissertation:} Feature Monkeys: A Composable Framework for IoT Applications & \textit{October 2012 - June 2016}
+		\\ & \textbf{Loreto College} BTEC National Extended Diploma IT Practitioner \textit{(A*A*A*)} & \textit{September 2010 - June 2012}
+		
+		%%%%%%
+		% Publications
+		%%%%%%
+		
+		\\  \textbf{Publications} &
+		\textbf{\underline{D.Lindsay}}, S.S.Gill, P.Garraghan - PRISM: An Experiment Framework for Straggler Analytics in Containerized Clusters \newline \textit{Proceedings of the 5th International Workshop on Container Technologies and Container Clouds}  & \textit{Published}
+		\\ & \textbf{\underline{D.Lindsay}}, S.S.Gill,  P.Garraghan - The Evolution of Distributed Computing Systems: From Fundamentals to New Frontiers \newline \textit{IEEE Annals of the History of Computing} & \textit{Submitted}
+		\\ & \textbf{\underline{D.Lindsay}}, P.Garraghan - FOMEC - Federated Orchestration for Mobile Edge Clusters & \textit{on-going}
+		\\ & \textbf{\underline{D.Lindsay}}, P.Garraghan - Workload Composition Aware Scheduling & \textit{on-going}
+		\\ & \textbf{S.S.Gill}, \textbf{\underline{D.Lindsay}}, P.Garraghan, et al - Transformative effects of IoT, Blockchain and Artificial Intelligence on cloud computing: Evolution, vision, trends and open challenges \newline \textit{Internet of Things} & \textit{Published}
+		
+		
+		%%%%%%
+		% Employment
+		%%%%%%
+		
+		\\ \textbf{Employment} &
+		\textbf{Lancaster University, Associate Lecturer} \newline Providing teaching assistance including preparing and giving lectures and assistance with lab exercises. & \textit{2017 - Present} 
+		\\ & \textbf{Demopad Software, Platform Engineer} \newline Implementation of platform features in both embedded system and cloud platform. Development of CI/CD pipeline. Diagnosing and providing patches for bugs. & \textit{September 2017 - January 2019}
+		\\ & \textbf{SCISYS, Software Engineer} \newline Worked on several projects include: IoT Tracking and Control platform, RNLI Situational Awareness Monitoring System, Seimens Design Railway Software. & \textit{July 2016 - September 2017} 
+			
+		%%%%%%
+		% Teaching
+		%%%%%%
+		
+%		\\ \textbf{Teaching} &
+%		\textbf{Lancaster University School of Computing and Communication}
+%		\newline 
+%		\begin{itemize}
+%			\item SCC.110 Software Development - Lecture: Version Control - In Lab Teaching
+%			\item SCC.203 Networking - In Lab Teaching
+%			\item SCC.211 Operating System - In Lab Teaching
+%			\item SCC.311 Distributed Systems - Lecture: Orchestration in the Cloud and Introduction to Kubernetes - In Lab Teaching
+%			
+%		\end{itemize}
+	
+	%%%%%%
+	% Skills
+	%%%%%%
+	
+	\\  \textbf{Skills} &
+	C, C++, Python, GoLang, Java, R, Docker, LXC, Ansible, Puppet,
+	\newline Kubernetes, Traefik, Git, SVN
+	
+	%%%%%%
+	% Hobbies
+	%%%%%%
+	
+	
+%	\\ \hline  \textbf{Hobbies} &
+%	Cycling, Running, Climbing, Networking, Operating Systems,  Electronics
+	
+	\\  \textbf{References} &
+	Dr Peter Garraghan  \textlangle p.garraghan@lancaster.ac.uk\textrangle \newline
+	Prof Utz Roedig  \textlangle u.roedig@cs.ucc.ie \textrangle
+	
+	\end{tabular}
+%\end{center}
+\end{minipage}
+\end{document}

@@ -1,0 +1,175 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\newenvironment{myindentpar}[1]%
+{\begin{list}{}%
+		{\setlength{\leftmargin}{#1}}%
+		\item[]%
+	\end{list}}
+
+\name{Dominic Lindsay} % Your name
+\address{Moorgate, Lancaster, United Kingdom} % Your address
+\address{Github: https://github.com/Babbleshack}
+%\address{Google Scholar: https://scholar.google.co.uk/citations?hl=en&user=97GaVyYAAAAJ}
+
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{ dcrl94@gmail.com \\ d.lindsay4@lancaster.ac.uk} % Your phone number and email
+
+
+\begin{document}
+	
+\begin{rSection}{Biography}
+	Experienced and passionate Software Engineer with a demonstrated history of working in the computer software industry. Currently working towards a Doctorate of Computer Science at Lancaster University. Interested in Software Engineering and Architecture, Design Patterns, Algorithms and Data Structures,  Distributed Systems, Orchestration, Cloud Computing, Fog Computing and the Internet of Things.
+\end{rSection}	
+
+%\begin{rSection} {Background}
+%	Software Engineering Specialization with experience in Operating Systems, Embedded Systems, Internet of Things, Cloud and Fog Computing, Software Architecture and Design Patterns.
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Lancaster University, Lancaster, United Kingdom} \hfill {\em September 2017 - Present} 
+\\ PhD Computer Science  \hfill {\em Expected Completion: March 2021}
+
+{\bf Lancaster University, Lancaster, United Kingdom} \hfill {\em October 2012 - June 2016} 
+\\ Masters in Science (MSci), Software Engineering \hfill {\em 1\textsuperscript{st} Class }
+
+{\bf Loreto College,  Manchester, United Kingdom} \hfill {\em September 2010 - June 2012}
+\\ BTEC National Extended Diploma IT Practitioner \hfill {\em A*A*A*}
+\end{rSection}
+
+%--------------------------------------------------------------------------------
+%    Projects And Seminars
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Research Projects}
+{\bf PolyArch: A Polymorphic scheduling Architecture for a Fog Enabled Internet of Things.}
+{\textit{PhD Thesis Project}}\\
+Large scale distributed applications are supported by  ``clusters'' of shared computing resources. Schedulers are responsible for orchestration of application workloads whilst maintaining cluster invariants. As such several scheduling platforms exists possessing affinity to known workload compositions. However future applications will require orchestration of resource which are not only heterogeneous in computing capability (\textit{Processing, Memory and Storage}), but also specialised accelerator hardware (\textit{GPU, TPU}) and mobile sensing devices. This project aims to develop a novel scheduling architectures and frameworks, capable of adapting their  policies and components to meet dynamic demands of a workload and infrastructure composition. 
+
+{\bf Feature Monkeys, a composable framework for Internet of Things applications.}\\
+{\textit {MSci Project -- with Demopad Software}}\\
+Feature composition framework for development of bespoke IoT Smart-Home applications from \textit{``Software Produce Lines''}. In this project I developed a framework which enables composition of IoT \textit{features} (sensing, actuation), enabling end user to compose application for their smart home environment. The project achieved two goals, development of a \textit{feature} plugin framework for interfacing with new IoT devices, and second, development of a feature composition framework enabling end user to compose  new smart home applications.
+\end{rSection}
+
+%--------------------------------------------------------------------------------
+%    Publications
+%--------------------------------------------------------------------------------
+\begin{rSection}{Publications}
+		
+%		The Evolution of Distributed Computing Systems: From Fundamentals to New Frontiers, \textit{Dominic Lindsay, Sukhpal Singh Gill, Daria Smirnova, and Peter Garraghan at Lancaster University}  -- World Scientific Reference on Digital Data-Centric Platforms in the Age of IOT (\textbf{In Review})
+%		
+%		PRISM: An Experiment Framework for Straggler Analytics
+%		in Containerized Clusters, \textit{Dominic Lindsay, Sukhpal Singh Gill and Peter Garraghan at Lancaster University} -- 5th International Workshop on Container Technologies and Container Clouds (\textbf{In Review})
+%		
+%		Workload Composition Aware Scheduling, \textit{Dominic Lindsay and Peter Garraghan at Lancaster University} (\textbf{In progress})
+		\begin{enumerate}
+			\item \textbf{\underline{D.Lindsay}}, S.S.Gill, P.Garraghan - PRISM: An Experiment Framework for Straggler Analytics in Containerized Clusters (\textbf{\mbox{Published}})
+			\newline \textit{Proceedings of the 5th International Workshop on Container Technologies and Container Clouds} 
+			
+%			\item \textbf{\underline{D.Lindsay}}, S.S.Gill,  P.Garraghan - The Evolution of Distributed Computing Systems: From Fundamentals to New Frontiers  (\textbf{Submitted})
+%			\newline \textit{IEEE Annals of the History of Computing}  
+			
+				\item \textbf{\underline{D.Lindsay}}, P.Garraghan - FOMEC - Federated Orchestration for Mobile Edge Clusters  (\mbox{\textbf{\textit{on-going}}})
+				
+				\item \textbf{S.S.Gill}, \textbf{\underline{D.Lindsay}}, P.Garraghan, et al - Transformative effects of IoT, Blockchain and Artificial Intelligence on cloud computing: Evolution, vision, trends and open challenges 
+				\newline \textit{Internet of Things}  \textit{Published}
+		\end{enumerate}
+
+%		\hyphenation{(\textit{Published})}
+%		
+%		\\  \textbf{Publications} &
+%		\textbf{\underline{D.Lindsay}}, S.S.Gill, P.Garraghan - PRISM: An Experiment Framework for Straggler Analytics in Containerized Clusters \newline \textit{Proceedings of the 5th International Workshop on Container Technologies and Container Clouds}  & \textit{Published}
+%		\\ & \textbf{\underline{D.Lindsay}}, S.S.Gill,  P.Garraghan - The Evolution of Distributed Computing Systems: From Fundamentals to New Frontiers \newline \textit{IEEE Annals of the History of Computing} & \textit{Submitted}
+%		\\ & \textbf{\underline{D.Lindsay}}, P.Garraghan - FOMEC - Federated Orchestration for Mobile Edge Clusters & \textit{on-going}
+%		\\ & \textbf{\underline{D.Lindsay}}, P.Garraghan - Workload Composition Aware Scheduling & \textit{on-going}
+%		\\ & \textbf{S.S.Gill}, \textbf{\underline{D.Lindsay}}, P.Garraghan, et al - Transformative effects of IoT, Blockchain and Artificial Intelligence on cloud computing: Evolution, vision, trends and open challenges \newline \textit{Internet of Things} & \textit{Published}
+%		
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Systems Development  & C, C++, Java, Python, GoLang\\
+Operating Systems & Linux, Windows, BSD, Raspbian (ARM)  \\
+Infrastructure Management & Kubernetes, Yarn, Mesos, Ceph, HDFS, Prometheus\\
+Deployment  & Docker, LXC,  Ansible, Puppet\\
+Version Control & Git, SVN, IBM Rational/Synergy/Team Concert
+\end{tabular}
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Industrial Experience}
+	
+	\begin{rSubsection}{Lancaster University}{September 2017 - Present}{Teaching Assistant}{}
+		\item [] Teaching and coursework development for multiple modules including:
+		\begin{itemize}
+			\item Software Development -- Focused on teaching fundamentals of software development such as abstraction, algorithms and data structure implementation.
+			\item Fundamental of Computer Science -- Algorithm and data structure theory, complexity, logic, and set theory.
+			\item Operating Systems -- Concurrency, Filesystems and Linux Kernel Development.
+			\item Networking --  Protocols (ICMP, TCP, UDP), and network programming. 
+		\end{itemize}
+	\end{rSubsection}
+	
+	\begin{rSubsection}{Demopad Software, Lancaster}{September 2017 - January 2019} {Platform Software Engineer}{C++, NodeJS, Bash, Docker}
+		\item [] I was responsible for identifying the cause of and fixing bugs in the system platform. Implementation of functional features and devices required for extention of demopads automation platform. Development of an automated build platform, capable of pulling latest changes from a \textit{version control system} and building a release and development image.
+		%		\item [] I worked with Demopad part-time. My role here includes fixing bugs in the system platform and implementing new functionality. I mainly work with C++ and NodeJS. I am also responsible for the system build process (automated via jenkins).
+	\end{rSubsection}
+	
+	\begin{rSubsection}{SCISYS, Bristol} {July 2016 - September 2017}{Software Engineer}{Java, C++, JavaScript, NodeJS, Apache ESB}
+		\item [] 
+At Scisys I worked on several projects as a software engineer within the company and collaborated with industry partners. My role involved design, implementation and testing of software systems for internal and external projects.  I worked as part of a team on several projects including:
+		\begin{enumerate}
+			\item[] \textbf{\textit{IoT Tracking and Control Platform}} Design and early development of an IoT tracking and control system. We developed a  Service Oriented Architecture  using Apache ESB components.  Apache Felix/Ares was chosen as the component framework. Apache Camel was used to provides a routing mechanism for interaction of components at runtime. Finally, I implemented the OGC SensorThings REST API as our standard model for defining IoT devices and their environments.
+			\item[] \textbf {\textit{RNLI SIMS System}} Development of hardware emulation platform for testing RNLI Situational Awareness and Response Systems (SIMS).  My responsibilities included development of hardware emulators including, CANBUS (GPS, Motor control and AIS ), IP Cameras,  erroneous value injection, and power management. Test case development,used for identifying software errors or bugs, feature regression and performance analysis. I also developed and evolved the SIMS user interface including development and integration of additional widgets reflecting system state.
+		\end{enumerate}
+	\end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{References}
+%	Reference are available on request.
+	\begin{description}
+		\item[Dr Peter Garraghan, Lancaster University]
+		\textit{Assistant Professor} -- p.garraghan@lancaster.ac.uk
+		\item[Dr Geral Kotonya, Lancaster University]
+		\textit{Senior Lecturer} -- g.kotonya@lancaster.ac.uk
+		\item[Dr Sukhpal Singh Gill, Queen Mary University]
+		\textit{Assistant Professor} -- s.s.gill@qmul.ac.uk
+	\end{description}
+\end{rSection}	
+\end{document}
