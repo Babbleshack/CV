@@ -5,6 +5,5 @@ all: cv.tex
 clean: cv.tex
 	rubber --clean cv.tex
 
-rm: 
-	clean
+rm: clean
 	rm -rf *.pdf
