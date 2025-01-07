@@ -75,7 +75,7 @@
 \photo{2.5cm}{./img/me.jpg}
 
 \personalinfo{%
-    \email{\href{mailto:dcrl94@gmail.com}{dcrl94@gmail.com}}
+    \email{\href{mailto:dominic.lindsay@babblebase.net}{dominic.lindsay@babblebase.net}}
     \email{\href{d.lindsay4@lancaster.ac.uk}{d.lindsay4@lancaster.ac.uk}}
     \phone{+447564337668}
     \location{Manchester, United Kingdom}
@@ -86,23 +86,33 @@
 
 \begin{fullwidth}
 \makecvheader
-Experienced and passionate Research Engineer with strong demonstrated history of working in both academic and software industries. Currently working towards a PhD of Computer Science. Research focused on development of novel resource management and scheduling policies for decentralised clusters. Strong experience of managing and deploying large scale distributed systems and infrastructure as well as Operating Systems development for both Linux and embedded systems.  
+Experienced and passionate Research Engineer with strong demonstrated history of working in both academic and software industries. Currently working towards a PhD of Computer Science. Research focused on development of novel resource management and scheduling policies for decentralised clusters. Strong experience of managing and deploying large scale distributed systems and infrastructure and Operating Systems development.
 
 \cvsection{Research \& Publications}
-\fullcite{sukhpaletal} \\
-\vspace{1mm}
+%\vspace{1mm}
+\fullcite{empirical_study}\\
 \fullcite{PRISM}\\
 
 \cvsection{Professional Experience \& Projects}
-\cvachievement{img/arm}{June 2020 --- September 2020}{Arm Research}{Research Engineer Internship}{%
-& Interned as part of Security Research team, contributed to two projects. Developed memory and capability management libraries for formally verified kernel. Development of distributed trusted computation platform enabling execution of applications amongst mutually distrusting peers.}
 \cvachievement{img/lancs.png}{September 2017 --- Present}{Lancaster University}{Associate Lecturer}{%
-& Teaching and coursework development, as well as lecture development and delivery across Operating Systems, Networking and Distributed Systems.}
-\cvachievement{img/demopad.jpg}{September 2017 --- January 2019}{Demopad Software}{Software Engineer}{%
-& Worked across several projects including development of CI/CD platform, Nest thermostat controller, and integration of disparate system components into a single distributed system.}
-\cvachievement{img/scisys.jpg}{July 2016 --- September 2017}{SCISYS}{Software Engineer}{%
-& Worked on several internal and external projects including automated verification system for RNLI SIMS system, development of prototype situational awareness systems for outdoor environments, and safety critical rail infrastructure for Siemens Rail.}
-
+& Teaching and coursework development, as well as lecture development and delivery across Operating Systems, Networking and Distributed Systems.
+}
+\cvachievement{img/iwoca.jpg}{September 2021 --- Present}{iwoca}{Senior Software Engineer}{%
+& Varied systems and software engineering role: Reducing AWS costs via development of ETL pipelines, observability tools and systems performance insights. Lead design \& implementation of modelling framework from RFC to implementation, prescribing a model development workflow supporting continuous training, deployment and monitoring.
+}
+%\cvachievement{img/comnoco.jpg}{May 2021 --- September 2021}{Comnoco}{Senior Software Engineer}{%
+%& Design and scale Comnoco's \textit{`no-code'} SaaS offering. This includes developing dynamic workflow and triggering system, scaling backend components and managing service infrastructure.
+%}
+\cvachievement{img/unikraft}{March 2021 --- June 2021}{Unikraft}{Research Engineer Internship}{%
+& Internship object: Develop unikraft OCI compatible runtime and integration of a unikernel build, deploy and execute workflow to Kubernetes control plain. I also develop a package command capable of packaging unikernels as OCI compatible images.
+}
+\cvachievement{img/arm}{June 2020 --- September 2020}{Arm Research}{Research Engineer Internship}{%
+& Interned as part of Security Research team, contributed to two projects. Developed memory and capability management libraries for formally verified kernel. Development of distributed trusted computation platform enabling execution of applications amongst mutually distrusting peers.
+}
+%\cvachievement{img/demopad.jpg}{September 2017 --- January 2019}{Demopad Software}{Software Engineer}{%
+%& Worked across several projects including development of CI/CD platform, Nest thermostat controller, and integration of disparate system components into a single distributed system.}
+%\cvachievement{img/scisys.jpg}{July 2016 --- September 2017}{SCISYS}{Software Engineer}{%
+%& Worked on several internal and external projects including automated verification system for RNLI SIMS system, development of prototype situational awareness systems for outdoor environments, and safety critical rail infrastructure for Siemens Rail.}
 
 \cvsection{Education}
 \cvachievementeducation{img/lancs.png}{September 2017 --- Present}{Lancaster University}{PhD Computer Science}{%
@@ -115,34 +125,48 @@ Experienced and passionate Research Engineer with strong demonstrated history of
 \textit{Operating Systems},
 \textit{Networking},
 \textit{Advanced Programming},
-\textit{Communication Systems} \\
+\textit{Communication Systems} 
 }
-
 \begin{multicols}{2}
-\cvsection{Competitions}
-\textbf{ARM Hackathon ---} Achieved 5th place \\
-\vspace{2mm}
-\cvsection{Hobbies \& Interests}
-\textbf{Hobbies: } Cycling, Running, Hiking, Camping, Climbing \\
-\textbf{Driving Licence: } Learning \\
-\textbf{Extra: } Maintain 100+ node Kubernetes CPU/GPU cluster \\
-
-\columnbreak
-
-\cvsection{Skills \& Expertise}
-\textbf{Programming Languages: } C, C++, Rust, GoLang, Java, Python, R, HTML, CSS, JavaScript, \LaTeX \\
-\vspace{2mm}
-\textbf{Technologies: } Linux, Linux internals, Docker, Kubernetes, Apache YARN \& HDFS, Apache Spark, CEPH, Java Spring, ELK Stack, Numpy, Pandas \\
-\vspace{2mm}
-\textbf{Expertise: } Profiling, Resource Management and Scheduling, Networking, DNS, Systems Programming, Operating Systems, Distributed Systems concepts and design. \\
-\vspace{2mm}
-\end{multicols}
+  \raggedcolumns
+\cvsection{Large Scale Infrastructure Managment}
+\textbf{Reliability Engineering} Responsible for management of large scale research cluster composed of over 100 heterogenous CPU/GPU nodes. Facilitating a wide range of research activities: machine learning infrastructure, development of orchestration systems. \\
+\textbf{Distributed Applications Development} OCI Runtimes (runc, runu, runv, podman, docker), Kubernetes Container Runtime Interface, Containerd Shim development. 
 
 \cvsection{References}
 \small
 \textcolor{accent}{\textbf{PhD Supervisor}} Dr. Peter Garraghan (p.garraghan@lancaster.ac.uk),
 \textcolor{accent}{\textbf{PhD Supervisor}}  Dr. Yehia Elkhatib (y.elkhatib@lancaster.ac.uk), \\
-\textcolor{accent}{\textbf{FYP Supervisor}}  Dr. Gerald Kotonya (g.kotonya@lancaster.ac.uk)
+\textcolor{accent}{\textbf{ARM Supervisor}}  Nick Spinale (nick.spinale@arm.com)
+
+\columnbreak
+
+\cvsection{Awards}
+\begin{itemize}
+  \item \textbf{Best paper award at IEEE JointCloud'21} -- Award for best paper at IEEE Jointcloud'21. I received the highest scores for my work "An Empirical Study of Inter-Cluster Resource Orchestration within Federated Cloud Clusters"
+\end{itemize}
+
+\cvsection{Skills \& Expertise}
+\textbf{Programming Languages: } C, C++, Rust, GoLang, Lua, Java, Python, R, HTML, CSS, JavaScript, \LaTeX \\
+%\vspace{1mm}
+\textbf{Technologies: } Linux, Linux internals, Docker, QEMU, LibVirt, Kubernetes, Argo, GitLab API, Apache YARN \& HDFS, Apache Spark, Pandas, GRPC, Java RMI\\
+%\vspace{1mm}
+\textbf{Expertise: } Profiling, Resource Management and Scheduling, Networking, DNS, Systems Programming, PKI, SSL/TLS, Operating Systems, Distributed Systems concepts and design. \\
+\vspace{1mm}
+\end{multicols}
+
+%\cvsection{References}
+%\small
+%\textcolor{accent}{\textbf{PhD Supervisor}} Dr. Peter Garraghan (p.garraghan@lancaster.ac.uk),
+%\textcolor{accent}{\textbf{PhD Supervisor}}  Dr. Yehia Elkhatib (y.elkhatib@lancaster.ac.uk), \\
+%\textcolor{accent}{\textbf{ARM Supervisor}}  Nick Spinale (nick.spinale@arm.com)
+
+%\cvsection{References}
+%\small
+%\textcolor{accent}{\textbf{PhD Supervisor}} Dr. Peter Garraghan (p.garraghan@lancaster.ac.uk),
+%\textcolor{accent}{\textbf{PhD Supervisor}}  Dr. Yehia Elkhatib (y.elkhatib@lancaster.ac.uk), \\
+%\textcolor{accent}{\textbf{FYP Supervisor}}  Dr. Gerald Kotonya (g.kotonya@lancaster.ac.uk),
+%\textcolor{accent}{\textbf{ARM Supervisor}}  Nick Spinale (nick.spinale@arm.com)
 
 
 \end{fullwidth}
