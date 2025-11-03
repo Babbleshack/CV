@@ -1,6 +1,7 @@
 \documentclass[10pt,a4paper]{base}
 
-\geometry{left=1cm,right=9cm,marginparwidth=6cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+%\geometry{left=1cm,right=9cm,marginparwidth=6cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+\geometry{left=1cm,right=8.5cm,marginparwidth=5.5cm,marginparsep=1cm,top=1cm,bottom=1cm}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -94,10 +95,16 @@
 
 \cvsection{Professional Experience \& Projects}
 
+\cvachievement{img/cryptio.jpg}{April 2025 --- Present}{Cryptio}{Senior Software Engineer}{%
+& Architected and delivered the Rust/Tokio reconciliation platform that processes 10M+ financial records, storing audit outcomes in OpenSearch while versioning workflow configurations in PostgreSQL.
+Designed the same platform with a modular pipeline framework supporting multi-source ingestion, staged transformations, and configurable matching/comparison rules to accommodate changing customer requirements.
+Partnered with cross-functional teams to integrate upstream APIs, communicate platform constraints to customers, and lead incident resolution, reinforcing our product-first delivery process.
+}
+
+
 \cvachievement{img/oneiro.jpg}{March 2024 --- Present}{Oneiro Solutions Ltd}{Technical Lead Manager | Staff Engineer}{%
 & Promoted to Technical Lead within a year, I led initiatives to refactor Terraform IaC, automate and scale EKS deployments, and introduce GitOps pipelines with ArgoCD. Achieved SOC 2 Type 1 certification, mentored junior developers, conducted hiring, and collaborated with clients to design solutions and resolve issues. Developed innovative scheduling mechanisms for distributed processes, positioning the business for SOC 2 Type 2 compliance.
 }
-
 
 \cvachievement{img/iwoca.jpg}{September 2021 --- March 2024}{iwoca}{Senior Software Engineer}{%
 & Led the development of a modeling platform enabling continuous training, versioning, and serving of models and features. Optimized AWS costs by improving ETL pipelines and observability tools, and evaluated streaming frameworks to address batch processing bottlenecks. Enhanced code quality, observability, and performance through refactoring, tooling, and automation. 
@@ -119,14 +126,17 @@
 %\cvachievement{img/scisys.jpg}{July 2016 --- September 2017}{SCISYS}{Software Engineer}{%
 %& Worked on several internal and external projects including automated verification system for RNLI SIMS system, development of prototype situational awareness systems for outdoor environments, and safety critical rail infrastructure for Siemens Rail.}
 
-\cvsection{Research \& Publications}
+%\cvsection{Research \& Publications}
 %\vspace{1mm}
-\fullcite{empirical_study}\\
-\fullcite{PRISM}\\
+%\fullcite{empirical_study}\\
+%\fullcite{PRISM}\\
 
 \cvsection{Education}
 \cvachievementeducation{img/lancs.png}{September 2017 --- June 2023}{Lancaster University}{PhD Computer Science}{%
-  & Orchestration systems for decentralised infrastructures. Investigates impact of inter-cluster characteristics such as sporadic utilisation, cross cluster latency and workload affinity. Specifically focused on development of novel scheduling policies and resource management systems for federated systems. [\textit{DID NOT COMPLETE}] } \\
+  & Orchestration systems for decentralised infrastructures. Investigates impact of inter-cluster characteristics such as sporadic utilisation, cross cluster latency and workload affinity. Specifically focused on development of novel scheduling policies and resource management systems for federated systems. [\textit{DID NOT COMPLETE}], Published papers: \textsc{\citetitle{empirical_study}}, \textsc{\citetitle{PRISM}}
+}
+%\cvachievementeducation{img/lancs.png}{September 2017 --- June 2023}{Lancaster University}{PhD Computer Science}{%
+%  & Orchestration systems for decentralised infrastructures. Investigates impact of inter-cluster characteristics such as sporadic utilisation, cross cluster latency and workload affinity. Specifically focused on development of novel scheduling policies and resource management systems for federated systems. [\textit{DID NOT COMPLETE}] } \\
 \cvachievementeducation{img/lancs.png}{October 2012 --- June 2016}{Lancaster University}{Msci Software Engineering \textcolor{accent}{(1st class honours)}}{%
 & \textcolor{accent}{\underline{Core Modules: }}
 \textit{Software Design Studio --- Part 1 \& 2},
@@ -145,9 +155,9 @@
 
 \cvsection{Skills \& Expertise}
 
-\textbf{Programming Languages:} C, C++, Rust, GoLang, Lua, Java, Python, R, HTML, CSS, JavaScript, TypeScript, Terraform, Terragrunt, \LaTeX. \\
+\textbf{Programming Languages:} Rust, GoLang, Lua, Java, Python, R, HTML, CSS, JavaScript, TypeScript, Terraform, Terragrunt, \LaTeX. \\
 \textbf{Technologies:} Linux, Linux internals, Docker, QEMU, LibVirt, Kubernetes, Argo, GitLab API, Apache YARN \& HDFS, Apache Spark, Pandas, GRPC, Java RMI, CockroachDB, PostgreSQL, RisingWave, Flink.\\
-\textbf{Expertise:} Profiling, Resource Management and Scheduling, Networking, DNS, Systems Programming, PKI, SSL/TLS, Operating Systems, Distributed Systems concepts and design. \\
+\textbf{Expertise:} Profiling, Resource Management and Scheduling, Networking, DNS, Systems Programming, Operating Systems, Distributed Systems concepts and design. \\
 
 \end{fullwidth}
 \end{document}
