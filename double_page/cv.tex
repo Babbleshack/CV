@@ -1,0 +1,271 @@
+\documentclass[10pt,a4paper]{base}
+
+\geometry{left=1cm,right=9cm,marginparwidth=6cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+% remove borders from href
+\hypersetup{%
+	pdfborder = {0 0 0}
+}
+
+
+
+% Colour Definitions
+\definecolor{VividPurple}{HTML}{b5121b}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+% Set section colours
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Custom commands
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\NewBibliographyString{toappearin}
+\NewBibliographyString{submittedto}
+\NewBibliographyString{status}
+\DefineBibliographyStrings{english}{%
+  toappearin  = {\textbf{to appear in}},
+  submittedto = {\textbf{\textcolor{VividPurple}{\\In review}}},
+}
+
+\DefineBibliographyStrings{english}{%
+  toappearin  = {\textbf{to appear in}},
+  status = {\textbf{\textcolor{VividPurple}{\\In progress}}},
+}
+
+\renewbibmacro*{in:}{%
+  \ifboolexpr{not test {\iffieldundef{pubstate}}
+              and (test {\iffieldequalstr{pubstate}{toappearin}}
+                   or test{\iffieldequalstr{pubstate}{submittedto}})}
+    {\printtext{%
+       \printfield{pubstate}\intitlepunct}%
+     \clearfield{pubstate}}
+    {\printtext{%
+       \bibstring{in}\intitlepunct}}}
+       
+\DeclareCiteCommand{\fullcite}
+  {\usebibmacro{prenote}}
+   {{\printtext[labelnumberwidth]{% New
+        \printfield{prefixnumber}% New
+        \printfield{labelnumber}}} % New
+  \usedriver
+     {\DeclareNameAlias{sortname}{default}}
+     {\thefield{entrytype}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\addbibresource{./publications.bib}
+\bibliography{publications}
+
+\begin{document}
+
+\name{Dominic Lindsay}
+
+\tagline{Technical Lead Manager | Distributed Systems Specialist}
+
+\photo{2.5cm}{./img/me.jpg}
+
+\personalinfo{%
+    \email{\href{mailto:dominic.lindsay@babblebase.net}{dominic.lindsay@babblebase.net}}
+    \phone{+447564337668}
+    \location{Manchester, United Kingdom}
+    \linkedin{\href{https://www.linkedin.com/in/dominic-lindsay-a7951478}{https://www.linkedin.com/in/dominic-lindsay-a7951478}}
+    \github{\href{https://github.com/Babbleshack}{https://github.com/Babbleshack}}
+}
+
+\begin{fullwidth}
+\makecvheader
+  Experienced and passionate \textit{\textbf{senior engineer}} with demonstrated history
+  of working in both academic, software and financial industries as both
+  contributor and researcher. Currently leading the platforms teams at Oneiro
+  Solutions. Previously researched development of novel resource management and
+  scheduling systems and policies for decentralised clusters.
+
+
+\cvsection{Professional Experience \& Projects}
+
+\cvachievement{img/oneiro.jpg}{March 2024 --- Present}{Oneiro Solutions Ltd}{Technical Lead Manager | Staff Engineer}{%
+& Focus on systems engineering, infrastructure, security and compliance.
+  \textit{Promoted to Technical Lead Manager during first year.}
+  \textbf{Distributed Scheduling System and Kuberenetes system programming:}
+  Engineered a novel distributed scheduling system leveraging rendezvous
+  hashing to deterministically map UUID-based schedule identifiers to executor
+  nodes, eliminating the need for centralised coordination. Utilised Kubernetes
+  headless services for dynamic node discovery, enabling automatic task
+  redistribution during cluster scaling events. This elegant approach achieved
+  consistent schedule distribution across the cluster while maintaining O(1)
+  lookup complexity, with each node independently determining its task
+  ownership through the hashing algorithm. The system's stateless design
+  eliminated both single points of failure and the complexity of distributed
+  consensus protocols typically required for distributed scheduling.
+  \textbf{SOC 2 Type 1 \& Type 2 Certification:} Led the 
+  integration and compliance initiatives for achieving SOC2 Type 1 and Type 2
+  certifications. Engineered security controls through modular `terraform`
+  configurations, implementing infrastructure-as-code principles for consistent
+  security posture. Hardened network infrastructure by enforcing TLS 1.3,
+  implementing strict CIDR-based access controls, and deploying WAF policies.
+  Established robust security practices including automated secret rotation,
+  comprehensive audit logging, and encrypted data-at-rest policies. Developed
+  and documented standardised processes for employee onboarding, access
+  management, and security training, ensuring continuous compliance with SOC 2
+  requirements. Implemented automated compliance checks in CI/CD pipelines to
+  maintain security standards across all deployments.
+  \textbf{Scaled multi-region infrastructure and deployments:} Architected and
+  scaled platform deployment across 6 AWS regions utilising multi-account
+  strategy with AWS Organisations and SSO. Managed fleet of 18+ EKS clusters
+  through `terraform` modules and custom controllers, implementing cross-region
+  disaster recovery and automated failover mechanisms. Transformed deployment
+  workflow by introducing GitOps methodology using ArgoCD, significantly
+  reducing deployment times from hours to minutes while dramatically improving
+  release reliability. Designed custom Helm charts and modular templates for
+  standardised application deployment patterns, enabling self-service
+  infrastructure capabilities for development teams across regions. Architected
+  a centralised GitOps repository structure organised along customer and
+  environment boundaries, implementing hierarchical configuration management
+  with Kustomize overlays for efficient per-customer customisation. This
+  approach streamlined configuration management, reduced deployment complexity,
+  and enabled rapid customer-specific modifications while maintaining
+  consistent base configurations across the platform. \textbf{Core
+  Technologies:} JavaScript/Typescript, AWS, Terraform \& Terragrunt, Kafka,
+  CockroachDB
+}
+
+\cvachievement{img/iwoca.jpg}{September 2021 --- March 2024}{iwoca}{Senior Software Engineer}{%
+& 
+  My contributions span both software and systems engineering, with a focus on
+  improving performance, increasing cost efficiencies and reducing system
+  complexity across iwocas modelling workflows:
+  \textbf{Modeling Platform Development:} Created a platform that incorporates development
+  workflows, model and feature versioning, and continuous model training and
+  serving. This streamlined the modeling process.
+  \textbf{Streaming Framework PoC and Evaluation:} Identified challenges and bottlenecks
+  associated with iwoca's batch processing systems (ETL). Scoped out worst
+  performing applications. Deployed and assessed Apache Flink streaming
+  framework and RisingWave streaming database. Developed POC applications used
+  to conduct feasibility analyses. This work will inform a 'streaming'
+  application framework aiming to simplifying development of self serve
+  streaming application for analysts; enabling `on-demand' feature generator
+  for model inferences.
+  \textbf{Rust FFI:} Refactored and improved Rust and Python FFI libraries. Developed
+  new features, implemented testing and managed performance metrics. 
+  \textbf{Cost Efficiency:} Reduced AWS costs by developing ETL pipelines and
+  observability tools. Additionally, by tracking resource utilisation metrics
+  through a CI pipeline, we identified areas for further AWS cost reductions.
+  \textbf{Code Improvement:} Refactored machine learning code by integrating software
+  engineering practices. This not only improved the quality and maintainability
+  of the code but also enhanced our model versioning processes.
+  \textbf{Observability Tooling:} Developed DataDog dashboards and alerts,
+  aimed at improving observability by identifying faults and errors before they
+  manifests as failures.
+  \textbf{Data Communication Tools:} Developed bots for Slack and GitLab CI to
+  scrape and compile analytics data summaries, enhancing our data tracking
+  capabilities. \textbf{Core Technologies:} Python, Rust, AWS, Kubernetes, Docker, Kafka,
+  Flink, RisingWave, PostgreSQL, SciPy, Jupyter Notebooks, MLEM, DataHub
+}
+
+\cvachievement{img/lancs.png}{September 2017 --- June 2023}{Lancaster University}{Associate Lecturer}{%
+& \textbf{Academic Teaching \& Course Development:} Teaching and coursework
+development across Operating Systems, Networking and Distributed Systems.
+\textbf{Advanced Technical Modules:} Developed lectures on containerisation
+technologies, examining Linux namespaces, cgroups, and container runtime
+internals. Created practical modules on container orchestration and Kubernetes,
+covering scheduling algorithms and distributed systems principles. Designed
+in-depth version control curriculum exploring Git's internal architecture,
+distributed consensus mechanisms, and modern DevOps workflows.
+\textbf{Core Computer Science Courses:} Developed coursework for Operating
+Systems (process management, memory systems, file systems), Distributed Systems
+(consensus algorithms, fault tolerance, scalability), and Computer Networks
+(protocol design, network architecture, security). Additional teaching
+responsibilities included Introduction to Programming, Information Systems, and
+Technology for E-Business courses.
+}
+%\cvachievement{img/comnoco.jpg}{May 2021 --- September 2021}{Comnoco}{Senior Software Engineer}{%
+%& Design and scale Comnoco's \textit{`no-code'} SaaS offering. This includes developing dynamic workflow and triggering system, scaling backend components and managing service infrastructure.
+%}
+\cvachievement{img/unikraft}{March 2021 --- June 2021}{Unikraft}{Research Engineer Internship}{%
+& 
+\textbf{Unikernel Containerisation and Kubernetes Integration:} Lead the design
+and PoC of an OCI-compatible Unikernel packaging and runtime system, enabling
+seamless integration of unikernels with container ecosystems. 
+Architected and implemented a custom containerd shim layer that bridged
+Unikernel virtual machines with Kubernetes control plane, effectively treating
+Unikernels as first-class container workloads. The solution leveraged libvirt
+and KVM for VM lifecycle management while maintaining OCI compatibility through
+custom runtime implementations.
+\textbf{Technical Innovation:} Developed prototype tooling that enabled
+Unikernels to be packaged and managed as tandard OCI compitable images,
+significantly simplifying deployment workflows and integration into industry standard solutions.
+Conducted extensive research into existing solutions like `KubeVirt' and `Kata
+Containers' to inform architectural decisions. 
+\textbf{Technical Leadership:} Mentored a University of Bucharest final-year
+student while working remotely, providing guidance on Golang development and
+container runtime architectures. Maintained detailed technical documentation
+and conducted knowledge-sharing sessions on Unikernel technologies and OCI
+specifications.
+\textbf{Core Technologies:} Golang, Kubernetes, containerd, libvirt, KVM, QEMU, OCI specifications, Unikernels
+}
+
+\cvachievement{img/arm}{June 2020 --- September 2020}{Arm Research}{Research Engineer Internship}{%
+& \textbf{seL4-Compatible Hypervisor Development:} Contributed to memory and
+capability pointer management libraries for a formally verified Type-1
+hypervisor kernel targeting seL4 compatibility, implemented in Rust. Researched
+and integrated capability-based security primitives inspired by CHERI and
+seL4's capability model, focusing on formal verification of memory safety
+properties. Developed mechanisms for safe capability manipulation and
+delegation, ensuring compatibility with seL4's capability-based access control
+system while leveraging Rust's type system for additional compile-time
+guarantees. This work explored the synthesis of hardware-enforced capabilities,
+seL4's formal verification approach, and Rust's ownership model to achieve
+provable security properties.
+
+}
+
+
+%\cvachievement{img/demopad.jpg}{September 2017 --- January 2019}{Demopad Software}{Software Engineer}{%
+%& Worked across several projects including development of CI/CD platform, Nest thermostat controller, and integration of disparate system components into a single distributed system.}
+%\cvachievement{img/scisys.jpg}{July 2016 --- September 2017}{SCISYS}{Software Engineer}{%
+%& Worked on several internal and external projects including automated verification system for RNLI SIMS system, development of prototype situational awareness systems for outdoor environments, and safety critical rail infrastructure for Siemens Rail.}
+
+\cvsection{Research \& Publications}
+%\vspace{1mm}
+\fullcite{empirical_study}\\
+\fullcite{PRISM}\\
+
+\cvsection{Education}
+\cvachievementeducation{img/lancs.png}{September 2017 --- June 2023}{Lancaster University}{PhD Computer Science}{%
+  & Orchestration systems for decentralised infrastructures. Investigates impact of inter-cluster characteristics such as sporadic utilisation, cross cluster latency and workload affinity. Specifically focused on development of novel scheduling policies and resource management systems for federated systems. [\textit{DID NOT COMPLETE}] } \\
+\cvachievementeducation{img/lancs.png}{October 2012 --- June 2016}{Lancaster University}{Msci Software Engineering \textcolor{accent}{(1st class honours)}}{%
+& \textcolor{accent}{\underline{Core Modules: }}
+\textit{Software Design Studio --- Part 1 \& 2},
+\textit{Distributed Systems}, 
+\textit{Advance Distributed Systems},
+\textit{Operating Systems},
+\textit{Networking},
+\textit{Advanced Programming},
+\textit{Communication Systems} 
+}
+
+\cvsection{Awards}
+\begin{itemize}
+  \item \textbf{Best paper award at IEEE JointCloud'21} -- Award for best paper at IEEE Jointcloud'21. I received the highest scores for my work "An Empirical Study of Inter-Cluster Resource Orchestration within Federated Cloud Clusters"
+\end{itemize}
+
+\cvsection{Skills \& Expertise}
+
+\textbf{Programming Languages:} C, C++, Rust, GoLang, Lua, Java, Python, R, HTML, CSS, JavaScript, TypeScript, Terraform, Terragrunt, \LaTeX. \\
+\textbf{Technologies:} Linux, Linux internals, Docker, QEMU, LibVirt, Kubernetes, Argo, GitLab API, Apache YARN \& HDFS, Apache Spark, Pandas, GRPC, Java RMI, CockroachDB, PostgreSQL, RisingWave, Flink.\\
+\textbf{Expertise:} Profiling, Resource Management and Scheduling, Networking, DNS, Systems Programming, PKI, SSL/TLS, Operating Systems, Distributed Systems concepts and design. \\
+
+\end{fullwidth}
+\end{document}
+
